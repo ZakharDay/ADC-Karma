@@ -1,0 +1,15 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<script type="text/javascript">
+  fetch('http://localhost:3000/api/services', {
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      document.body.append(JSON.stringify(data))
+    })
+</script>
