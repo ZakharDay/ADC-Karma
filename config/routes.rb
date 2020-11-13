@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :minors
   default_url_options host: 'localhost:3000'
 
   namespace :api do
@@ -8,5 +9,5 @@ Rails.application.routes.draw do
   resources :services
 
   get 'welcome/index'
-  root 'welcome#index'
+  root 'minors#index'
 end

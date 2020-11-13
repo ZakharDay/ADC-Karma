@@ -1,5 +1,3 @@
-include Rails.application.routes.url_helpers
-
 class Service < ApplicationRecord
 
   def as_json_for_main_page
@@ -8,8 +6,7 @@ class Service < ApplicationRecord
       description: description,
       requirements: requirements,
       duration: duration,
-      correction_time: correction_time,
-      url: api_service_url(self, format: :json)
+      correction_time: correction_time
     }
   end
 

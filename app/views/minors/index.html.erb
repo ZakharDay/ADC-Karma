@@ -1,0 +1,31 @@
+<h2>Москва</h2>
+
+<% @minors.each do |minor| %>
+  <% if minor.city == 'Москва' %>
+    <p><%= link_to minor.name, minor.page_url %></p>
+  <% end %>
+<% end %>
+
+<h2>Санкт-Петербург</h2>
+
+<% @minors.each do |minor| %>
+  <% if minor.city == 'Санкт-петербург' %>
+    <p><%= link_to minor.name, minor.page_url %></p>
+  <% end %>
+<% end %>
+
+<h2>Нижний Новгород</h2>
+
+<% @minors.each do |minor| %>
+  <% if minor.city == 'Нижний Новгород' %>
+    <p><%= link_to minor.name, minor.page_url %></p>
+  <% end %>
+<% end %>
+
+<h2>Пермь</h2>
+
+<% @minors.each do |minor| %>
+  <% if minor.city == 'Пермь' %>
+    <p><%= link_to minor.name, minor.page_url %></p>
+  <% end %>
+<% end %>
