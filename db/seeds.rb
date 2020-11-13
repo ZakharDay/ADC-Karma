@@ -16,7 +16,7 @@ end
 def get_minor_list
   @city = ''
   @faculty = ''
-  
+
   html = Curl.get(@minor_list_url)
   body_html = Nokogiri::HTML(html.body_str)
   post_text_html = body_html.css('.post__text')
@@ -41,6 +41,16 @@ def get_minor_list
           puts @faculty
           name = paragraph_entry.content
           page_url = paragraph_entry[:href]
+
+          # City
+          # name
+
+          # Faculty
+          # name
+
+          # Как поправить Санкт-Петербург
+
+          # Вывести по группам, как на сайте Вышки
 
           minor = Minor.create!(city: @city, faculty: @faculty, name: name, page_url: page_url)
 
